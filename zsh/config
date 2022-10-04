@@ -1,0 +1,11 @@
+# Configure zsh options: https://linux.die.net/man/1/zshoptions
+setopt pushdsilent	        # pushd has no output (output is useless)
+unsetopt pushdignoredups    # allow duplications on the dir stack
+unsetopt autopushd 	        # disable cd from pushing to the dir stack
+
+# Useful aliases
+alias -g docker-compose="docker compose"    # for compatibility with scripts from older docker versions
+alias -g dirs="dirs -v"                     # adds more information for dirs on default
+
+# Hook for direnv: https://direnv.net/
+eval "$(direnv hook zsh)"
