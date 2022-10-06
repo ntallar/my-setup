@@ -30,7 +30,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xrandr --output eDP-1 --right-of HDMI-1
 
 # Configure wallpaper
-exec --no-startup-id feh --bg-scale wallpaper/pacman.jpg
+exec --no-startup-id feh --bg-scale $configlocation/wallpaper/pacman.jpg
 
 
 # Import audio configurations: using pactl to adjust volume in PulseAudio.
@@ -147,12 +147,10 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 
 # move to next template
-set $moveLeftWorkspace scripts/shift-container.sh -1
-set $moveRightWorkspace scripts/shift-container.sh 1
-bindsym $mod+Control+j exec $moveLeftWorkspace
-bindsym $mod+Control+Left exec $moveLeftWorkspace
-bindsym $mod+Control+ntilde exec $moveRightWorkspace
-bindsym $mod+Control+Right exec $moveRightWorkspace
+bindsym $mod+Control+j exec --no-startup-id $configlocation/scripts/shift-container.sh -1
+bindsym $mod+Control+Left exec --no-startup-id $configlocation/scripts/shift-container.sh -1
+bindsym $mod+Control+ntilde exec --no-startup-id $configlocation/scripts/shift-container.sh 1
+bindsym $mod+Control+Right exec --no-startup-id $configlocation/scripts/shift-container.sh 1
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
