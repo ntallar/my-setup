@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] [setup-script] add one for the pipewire problem I had with my new audiophones
+- [X] [setup-script] add one for the pipewire problem I had with my new audiophones
 - [ ] [setup-script] add one for setting i3 as the default
 
 - [ ] [i3] Generalize for usage in my personal computer as well (there are some paths hardcoded)

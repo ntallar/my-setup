@@ -17,7 +17,7 @@ font pango:monospace 8
 # Import configurations
 include configs/startup.conf
 include configs/audio.conf
+include configs/work-layout.conf # This defines the workspace variables so should be before configs/workspaces
 include configs/workspaces.conf
-include configs/work-layout.conf # This overrides things from workspaces.conf and so should be after!
 include configs/i3.conf
 include configs/other.conf
