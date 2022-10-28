@@ -33,6 +33,24 @@ command=~/Programs/i3blocks-contrib/volume-pipewire/volume-pipewire
 interval=once
 signal=1
 
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery]
+command=~/Programs/i3blocks-contrib/battery2/battery2
+label=⚡
+markup=pango
+interval=30
+
+# CPU usage
+#
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[cpu_usage]
+label=CPU
+interval=10
+min_width=CPU: 100.00%
+
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
@@ -61,6 +79,7 @@ interval=30
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 [iface]
+label=📶
 color=#00FF00
 interval=10
 separator=false
@@ -71,22 +90,6 @@ separator=false
 
 [bandwidth]
 interval=5
-
-# CPU usage
-#
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
-[cpu_usage]
-label=CPU
-interval=10
-min_width=CPU: 100.00%
-
-# Battery indicator
-#
-# The battery instance defaults to 0.
-[battery]
-label=⚡
-interval=30
 
 # Date Time
 #
