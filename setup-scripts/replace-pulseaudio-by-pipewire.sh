@@ -2,9 +2,9 @@
 
 # Pre-requisites
 sudo add-apt-repository ppa:pipewire-debian/pipewire-upstream
-sudo apt update
+sudo apt-get update
 sudo apt-get install pipewire
-sudo apt install pipewire-audio-client-libraries
+sudo apt-get install pipewire-audio-client-libraries
 
 # Replace Pulseaudio by pipewire
 systemctl --user daemon-reload
